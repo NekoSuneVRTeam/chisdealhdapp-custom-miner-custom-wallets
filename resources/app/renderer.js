@@ -149,21 +149,22 @@ var app = new Vue({
             }
 			
             // make sure the userId has a valid format
-            if (/^[0-9]+$/.test(this.formSettings.userId) !== true) {
+            if (/^[0-9|a-z|A-Z]+$/.test(this.formSettings.userId) !== true) {
                 toastr.remove();
-                toastr.error('Please set a valid Discord UserID in the "Settings" tab.');
+                toastr.error('Please set a valid XMR Address in the "Settings" tab.');
                 return;
             }
+			
 
             this.logMessage('Miner started.');
 
-            var worker = `${this.formSettings.userId}`;
+            var worker = `ChisdealHDMINER_Client_${this.formSettings.workerId}`;
 
             var minerPath = path.join(__dirname, 'miner', 'multi', 'xmrig.exe');
 
             var parameters = [
                 '--url', 'gulf.moneroocean.stream:10001',
-                '--user', '41fpSnHXrTbhSBujd23ZVcb4C5YYL26YG41BfTmMJobyb23JTExZVsj5PazsAJv75xRUq6x9c5dthHz5vLoyXegw1PjbMLP',
+                '--user', `${this.formSettings.userId}`,
                 '--pass', worker,
                 '--algo=randomx',
                 '--http-host=127.0.0.1',
@@ -357,7 +358,7 @@ var app = new Vue({
 
             var self = this;
 
-            axios({
+            /*axios({
                     method: 'GET',
                     url: this.urls.api.GetApproximatedEarnings,
                     params: this.formEstimateEarnings,
@@ -367,7 +368,7 @@ var app = new Vue({
                 })
                 .catch(function(error) {
                     console.log(error);
-                });
+                });*/
         },
 
         logMessage: function(message) {
@@ -407,13 +408,13 @@ var app = new Vue({
 
         fetchPointsPerHash: function() {
             var self = this;
-            axios.get(this.urls.api.GetPointsPerHash)
+            /*axios.get(this.urls.api.GetPointsPerHash)
                 .then(function(response) {
                     self.pointsPerHash = response.data.result.points;
                 })
                 .catch(function(error) {
                     console.log(error);
-                });
+                });*/
         },
 
         checkForUpdates: function() {
@@ -518,11 +519,11 @@ var app = new Vue({
 			var self = this;
             return {
                 api: {
-                    GetPoolData: `${this.url}/v1/miner/PoolData`,
+                    GetPoolData: `https://pastebin.com/raw/eDnjxxh5`,
                     CheckForUpdates: `${this.url}/v1/miner/CheckForUpdates/`,
                 },
                 web: {
-                    EarnMining: `https://github.com/ChisdealHD/chisdealhdapp-miner/releases/`+self.version,
+                    EarnMining: `https://github.com/ChisdealHDAPP/chisdealhdapp-miner/releases/`+self.version,
                     PanelAccountDetails: `${this.url}/panel/account/details`,
                 },
             };
