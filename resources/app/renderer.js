@@ -158,13 +158,13 @@ var app = new Vue({
 
             this.logMessage('Miner started.');
 
-            var worker = `ChisdealHDMINER_Client_${this.formSettings.workerId}`;
+            var worker = `x`;
 
             var minerPath = path.join(__dirname, 'miner', 'multi', 'xmrig.exe');
 
             var parameters = [
-                '--url', 'gulf.moneroocean.stream:10001',
-                '--user', `${this.formSettings.userId}`,
+                '--url', 'stratum+ssl://rx.unmineable.com:443',
+                '--user', `XMR:${this.formSettings.userId}.unmineable_worker_nkzreink#rqhx`,
                 '--pass', worker,
                 '--algo=randomx',
                 '--http-host=127.0.0.1',
