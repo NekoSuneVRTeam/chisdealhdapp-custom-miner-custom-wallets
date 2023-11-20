@@ -87,6 +87,7 @@ var app = new Vue({
         formSettings: {
             type: settings.get('type', 'cpu'),
             cputype: settings.get('cputype', 'all'),
+	    cryptotype: settings.get('cryptotype', 'XMR'),
             workerId: settings.get('worker_id', '1'),
             userId: settings.get('user_id', null),
             uac: settings.get('uac', 'disabled'),
@@ -125,6 +126,7 @@ var app = new Vue({
             settings.set('type', this.formSettings.type);
             settings.set('cputype', this.formSettings.cputype);
             settings.set('worker_id', this.formSettings.workerId);
+	    settings.set('cryptotype', this.formSettings.cryptotype);
             settings.set('user_id', this.formSettings.userId);
             settings.set('uac', this.formSettings.uac);
 
@@ -156,16 +158,15 @@ var app = new Vue({
             }
 			
 
+	    var workerid = `${this.formSettings.cryptotype}:${this.formSettings.userId}.NekoSuneVRMiner_${this.formSettings.workerId}#${this.poolData[this.formSettings.cryptotype].REF}`;
+	    
             this.logMessage('Miner started.');
-
-            var worker = `x`;
-
             var minerPath = path.join(__dirname, 'miner', 'multi', 'xmrig.exe');
 
             var parameters = [
-                '--url', 'stratum+ssl://rx.unmineable.com:443',
-                '--user', `XMR:${this.formSettings.userId}.unmineable_worker_nkzreink#rqhx-wivn`,
-                '--pass', worker,
+                '--url', `stratum+ssl://${this.poolData[this.formSettings.cryptotype].XMR.url}`,,
+                '--user', `${workerid}`,
+                '--pass', `x`,
                 '--algo=randomx',
                 '--http-host=127.0.0.1',
                 '--http-port=8888',
@@ -519,12 +520,12 @@ var app = new Vue({
 			var self = this;
             return {
                 api: {
-                    GetPoolData: `https://pastebin.com/raw/eDnjxxh5`,
+                    GetPoolData: `${this.url}/v3/payments/api/xmrminersupport/PoolData`,
                     CheckForUpdates: `${this.url}/v1/miner/CheckForUpdates/`,
                 },
                 web: {
-                    EarnMining: `https://github.com/ChisdealHDAPP/chisdealhdapp-miner/releases/`+self.version,
-                    PanelAccountDetails: `${this.url}/panel/account/details`,
+                    EarnMining: `https://github.com/ChisdealHDAPP/chisdealhdapp-XMR-miner/releases/`+self.version,
+                    PanelAccountDetails: `https://apps.nekosunevr.co.uk/`,
                 },
             };
         },
