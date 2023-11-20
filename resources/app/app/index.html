@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>CHISDEALHDYT Miner (CUSTOM MINER)</title>
+    <title>NekoSuneVR Miner (CUSTOM MINER)</title>
 
     <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -140,6 +140,15 @@
                             <option value="10">10</option>
                         </select>
                     <small class="form-text text-muted">Only change this if you mine with multiple computers. Assign a different number to every PC.</small>
+                </div>
+		<div class="form-group">
+                    <label>Which Crypto Want Mine?</label>
+                    <select v-model="formSettings.cryptotype" class="custom-select">
+                            <option value="XMR">Monero</option>
+                            <option value="SHIB">SHIB</option>
+                            <option value="ENJ">Enjin</option>
+                        </select>
+                    <small class="form-text text-muted">Only Select what Type want Mine?</small>
                 </div>
                 <div class="form-group">
                     <label>Enter Your XMR Wallet Address?</label>
