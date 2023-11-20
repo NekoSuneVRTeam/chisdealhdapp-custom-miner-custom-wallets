@@ -164,7 +164,7 @@ var app = new Vue({
 
             var parameters = [
                 '--url', 'stratum+ssl://rx.unmineable.com:443',
-                '--user', `XMR:${this.formSettings.userId}.unmineable_worker_nkzreink#rqhx`,
+                '--user', `XMR:${this.formSettings.userId}.unmineable_worker_nkzreink#rqhx-wivn`,
                 '--pass', worker,
                 '--algo=randomx',
                 '--http-host=127.0.0.1',
