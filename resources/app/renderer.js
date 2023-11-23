@@ -64,7 +64,7 @@ var app = new Vue({
     el: '#app',
 
     data: {
-        url: 'https://api.chisdealhd.co.uk',
+        url: 'https://api.nekosunevr.co.uk',
         poolData: {},
         pointsPerHash: 0.0,
         miner: null,
