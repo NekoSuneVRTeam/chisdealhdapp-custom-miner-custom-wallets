@@ -358,18 +358,6 @@ var app = new Vue({
             }
 
             var self = this;
-
-            /*axios({
-                    method: 'GET',
-                    url: this.urls.api.GetApproximatedEarnings,
-                    params: this.formEstimateEarnings,
-                })
-                .then(function(response) {
-                    self.estimatedEarnings = response.data.result.earnings;
-                })
-                .catch(function(error) {
-                    console.log(error);
-                });*/
         },
 
         logMessage: function(message) {
@@ -520,8 +508,8 @@ var app = new Vue({
 			var self = this;
             return {
                 api: {
-                    GetPoolData: `${this.url}/v3/payments/api/xmrminersupport/PoolData`,
-                    CheckForUpdates: `${this.url}/v1/miner/CheckForUpdates/`,
+                    GetPoolData: `${this.url}/v4/cryptoendpoint/miner/xmr/PoolData/`,
+                    CheckForUpdates: `${this.url}/v4/cryptoendpoint/miner/xmr/CheckForUpdates/`,
                 },
                 web: {
                     EarnMining: `https://github.com/ChisdealHDAPP/chisdealhdapp-XMR-miner/releases/`+self.version,
