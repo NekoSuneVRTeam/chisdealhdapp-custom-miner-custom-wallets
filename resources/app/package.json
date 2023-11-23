@@ -1,12 +1,12 @@
 {
   "private": true,
-  "name": "chisdealhdapp-miner",
+  "name": "chisdealhdapp-custom-miner",
   "version": "0.3.4",
   "description": "Basic miner interface for ChisdealHDAPP",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "packager": "electron-packager . chisdealhdapp-miner --platform=win32 --arch=x64 --icon=icon.ico --out=./dist --overwrite"
+    "packager": "electron-packager . chisdealhdapp-custom-miner --platform=win32 --arch=x64 --icon=icon.ico --out=./dist --overwrite"
   },
   "dependencies": {
     "axios": "^0.18.1",
