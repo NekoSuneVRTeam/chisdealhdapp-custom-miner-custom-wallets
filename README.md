@@ -29,9 +29,3 @@ Its Using [https://unmineable.com/](https://unmineable.com/)
 ## DONATION NOTE: 
 
 # We do not accept any Refunds or money back, if you donated for causes of supporting channel. its gents TOS for Donating people to follow Rules If you Donate then you good support, if you donate and ask for refunds. thats classify fraud that can get you arrested and reported to member of PayPal Team as category Refunds not allowed. If want support by Lurking or Be round for watching its fine to me. not going for Money Wise, but i really do saving up for new PC so i can get more in Games and get myself own VR Headset do VR Streams and videos on Twitch and YouTube. Not responsible any actions you take, if beg for money or beg for mod and stuff. you get permit banned from Channel.
-
-# You can Do Monthly Payments @ https://www.buymeacoffee.com/ChisdealHDYT £5 a month or £60 a year and you get Membership on our Discord Server and Access Early Commands on MY Discord BOT and many more. All donations does Goes Towards better Stream Quality, more Games even more Gaming Esperance setups.
-
-# https://tools.chisdealhd.co.uk/payments/litecoin/?price=5&item=Donation&userid=000000000000000000
-
-# https://tools.chisdealhd.co.uk/payments/hives/?price=5&item=Donation&userid=000000000000000000
